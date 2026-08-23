@@ -107,20 +107,34 @@
     </section>
 
     <section id="moment" class="max-w-6xl mx-auto px-6 py-16 w-full">
-    <div class="mb-8">
-        <h3 class="text-xl md:text-2xl font-semibold tracking-wide text-[#4A403A]">KKN Recap</h3>
-        <p class="text-xs text-[#7A6B5D] mt-1">Kumpulan frame berharga dari babak perjalanan yang paling berkesan.</p>
+    <!-- Header Section + Tombol (Opsional di atas, atau bisa di bawah) -->
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+        <div>
+            <h3 class="text-xl md:text-2xl font-semibold tracking-wide text-[#4A403A]">KKN Recap</h3>
+            <p class="text-xs text-[#7A6B5D] mt-1">Kumpulan frame berharga dari babak perjalanan yang paling berkesan.</p>
+        </div>
+        <!-- Tombol jika ingin ditaruh di atas sejajar judul -->
+        <a href="galeri.html" class="hidden sm:inline-flex items-center text-xs font-medium text-[#4A403A] hover:text-[#7A6B5D] transition duration-200">
+            Lihat Semua Foto &rarr;
+        </a>
     </div>
     
-    <!-- Container Grid yang akan diisi otomatis lewat JavaScript -->
+    <!-- Container Grid Otomatis -->
     <div id="gallery-container" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
-        <!-- Item akan digenerate di sini -->
+        <!-- Item akan digenerate otomatis lewat JavaScript -->
+    </div>
+
+    <!-- Tombol jika di layar HP / ditaruh di bawah grid -->
+    <div class="mt-8 text-center sm:hidden">
+        <a href="galeri.html" class="inline-block w-full py-3 bg-white border border-[#EBE4DC] rounded-xl text-xs font-medium text-[#4A403A] shadow-sm hover:bg-[#FAF7F5] transition duration-200">
+            Lihat Semua Galeri KKN &rarr;
+        </a>
     </div>
 </section>
 
 <!-- Script untuk render otomatis -->
 <script>
-    // Daftar foto yang mau ditampilkan (kamu tinggal tambah nama file-nya di sini)
+    // Batasi misalnya di halaman utama cuma tampil 8 foto terbaru
     const moments = [
         "moment-1.jpg",
         "moment-2.jpg",
