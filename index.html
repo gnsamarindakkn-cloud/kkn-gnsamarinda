@@ -53,7 +53,7 @@
         </div>
 
         <div class="absolute bottom-4 z-10 text-[11px] tracking-wider text-[#8D7B68] uppercase font-medium">
-            Archived by Tim KKN Gunung Samarinda 
+            Archived by Tim PDD KKN Gunung Samarinda 
         </div>
     </section>
 
@@ -107,47 +107,45 @@
     </section>
 
     <section id="moment" class="max-w-6xl mx-auto px-6 py-16 w-full">
-        <div class="mb-8">
-            <h3 class="text-xl md:text-2xl font-semibold tracking-wide text-[#4A403A]">Capture the moment</h3>
-            <p class="text-xs text-[#7A6B5D] mt-1">Koleksi memori perjalanan KKN kami.</p>
-        </div>
+    <div class="mb-8">
+        <h3 class="text-xl md:text-2xl font-semibold tracking-wide text-[#4A403A]">KKN Recap</h3>
+        <p class="text-xs text-[#7A6B5D] mt-1">Kumpulan frame berharga dari babak perjalanan yang paling berkesan.</p>
+    </div>
+    
+    <!-- Container Grid yang akan diisi otomatis lewat JavaScript -->
+    <div id="gallery-container" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
+        <!-- Item akan digenerate di sini -->
+    </div>
+</section>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
-            <div class="aspect-[4/3] bg-white rounded-xl overflow-hidden border border-[#EBE4DC] shadow-sm hover:scale-[1.02] transition duration-300 flex items-center justify-center text-[#7A6B5D] text-xs">
-                <img src="img/moment-1.jpg" alt="Moment 1" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>Moment 1</span>';">
-            </div>
-            <div class="aspect-[4/3] bg-white rounded-xl overflow-hidden border border-[#EBE4DC] shadow-sm hover:scale-[1.02] transition duration-300 flex items-center justify-center text-[#7A6B5D] text-xs">
-                <img src="img/moment-2.jpg" alt="Moment 2" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>Moment 2</span>';">
-            </div>
-            <div class="aspect-[4/3] bg-white rounded-xl overflow-hidden border border-[#EBE4DC] shadow-sm hover:scale-[1.02] transition duration-300 flex items-center justify-center text-[#7A6B5D] text-xs">
-                <img src="img/moment-3.jpg" alt="Moment 3" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>Moment 3</span>';">
-            </div>
-            <div class="aspect-[4/3] bg-white rounded-xl overflow-hidden border border-[#EBE4DC] shadow-sm hover:scale-[1.02] transition duration-300 flex items-center justify-center text-[#7A6B5D] text-xs">
-                <img src="img/moment-4.jpg" alt="Moment 4" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>Moment 4</span>';">
-            </div>
-            <div class="aspect-[4/3] bg-white rounded-xl overflow-hidden border border-[#EBE4DC] shadow-sm hover:scale-[1.02] transition duration-300 flex items-center justify-center text-[#7A6B5D] text-xs">
-                <img src="img/moment-5.jpg" alt="Moment 5" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>Moment 5</span>';">
-            </div>
-            <div class="aspect-[4/3] bg-white rounded-xl overflow-hidden border border-[#EBE4DC] shadow-sm hover:scale-[1.02] transition duration-300 flex items-center justify-center text-[#7A6B5D] text-xs">
-                <img src="img/moment-6.jpg" alt="Moment 6" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>Moment 6</span>';">
-            </div>
-            <div class="aspect-[4/3] bg-white rounded-xl overflow-hidden border border-[#EBE4DC] shadow-sm hover:scale-[1.02] transition duration-300 flex items-center justify-center text-[#7A6B5D] text-xs">
-                <img src="img/moment-7.jpg" alt="Moment 7" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>Moment 7</span>';">
-            </div>
-            <div class="aspect-[4/3] bg-white rounded-xl overflow-hidden border border-[#EBE4DC] shadow-sm hover:scale-[1.02] transition duration-300 flex items-center justify-center text-[#7A6B5D] text-xs">
-                <img src="img/moment-8.jpg" alt="Moment 8" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>Moment 8</span>';">
-            </div>
-        </div>
+<!-- Script untuk render otomatis -->
+<script>
+    // Daftar foto yang mau ditampilkan (kamu tinggal tambah nama file-nya di sini)
+    const moments = [
+        "moment-1.jpg",
+        "moment-2.jpg",
+        "moment-3.jpg",
+        "moment-4.jpg",
+        "moment-5.jpg",
+        "moment-6.jpg",
+        "moment-7.jpg",
+        "moment-8.jpg"
+    ];
 
-        <div class="mt-12 flex justify-center">
-            <a href="galery.html" class="px-8 py-3 rounded-full bg-[#8D7B68] text-white text-xs md:text-sm font-medium tracking-widest uppercase hover:bg-[#7A6B5D] transition duration-300 shadow-md flex items-center gap-2">
-                <span>View All Gallery</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-            </a>
-        </div>
-    </section>
+    const container = document.getElementById('gallery-container');
+
+    moments.forEach((imgName, index) => {
+        const itemNumber = index + 1;
+        const div = document.createElement('div');
+        div.className = "aspect-[4/3] bg-white rounded-xl overflow-hidden border border-[#EBE4DC] shadow-sm hover:scale-[1.02] transition duration-300 flex items-center justify-center text-[#7A6B5D] text-xs";
+        
+        div.innerHTML = `
+            <img src="img/${imgName}" alt="Moment ${itemNumber}" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>Moment ${itemNumber}</span>';">
+        `;
+        
+        container.appendChild(div);
+    });
+</script>
 
     <footer class="w-full py-10 px-6 border-t border-[#EBE4DC] bg-white/40 mt-auto flex flex-col sm:flex-row justify-between items-center text-xs text-[#7A6B5D]">
         <p>Made with 🤎 by KKN Gunung Samarinda </p>
