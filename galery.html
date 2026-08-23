@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Gallery - KKN Gunung Samarinda </title>
-  
+    <title>Album Kenangan - KKN Gunung Samarinda</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-   
+    <!-- Google Fonts: Plus Jakarta Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -14,66 +14,67 @@
         }
     </style>
 </head>
-<body class="bg-[#F9F6F0] text-[#4A403A] antialiased min-h-screen flex flex-col selection:bg-[#D3C5B4] selection:text-[#4A403A]">
+<body class="bg-[#F4EFEB] text-[#4A403A] antialiased min-h-screen flex flex-col selection:bg-[#D3C5B4] selection:text-[#4A403A]">
 
-   
-    <header class="w-full py-6 px-8 flex justify-between items-center border-b border-[#EBE4DC] bg-white/50 backdrop-blur-md sticky top-0 z-50">
+    <!-- Header / Top Bar -->
+    <header class="w-full py-6 px-8 flex justify-between items-center border-b border-[#EBE4DC] bg-white/70 backdrop-blur-md sticky top-0 z-50">
         <a href="index.html" class="flex items-center gap-2 text-xs md:text-sm font-medium tracking-wide text-[#8D7B68] hover:text-[#4A403A] transition">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
             <span>Back to Home</span>
         </a>
-        <h1 class="text-xs md:text-sm font-semibold tracking-widest uppercase text-[#4A403A]">Full Gallery</h1>
+        <h1 class="text-xs md:text-sm font-semibold tracking-widest uppercase text-[#4A403A]">Photo Album</h1>
         <div class="w-20"></div>
     </header>
 
-    <section class="max-w-6xl mx-auto px-6 pt-12 pb-6 w-full text-center">
-        <h2 class="text-2xl md:text-4xl font-bold tracking-tight text-[#4A403A]">KKN Recap</h2>
-        <p class="text-xs md:text-sm text-[#7A6B5D] mt-2">Kumpulan frame berharga dari babak perjalanan yang paling berkesan.</p>
+    <!-- Title Section -->
+    <section class="max-w-6xl mx-auto px-6 pt-12 pb-4 w-full text-center">
+        <h2 class="text-2xl md:text-4xl font-bold tracking-tight text-[#4A403A]">Album Kenangan KKN</h2>
+        <p class="text-xs md:text-sm text-[#7A6B5D] mt-2">Lembaran cerita, tawa, dan memori abadi di Gunung Samarinda.</p>
     </section>
 
+    <!-- Category Filter Buttons -->
     <section class="max-w-5xl mx-auto px-6 py-6 w-full flex flex-wrap items-center justify-center gap-3 md:gap-4" id="filter-container">
         <button onclick="filterGallery('all')" class="filter-btn px-5 py-2 rounded-full border text-xs md:text-sm tracking-wide bg-[#8D7B68] text-white border-[#D3C5B4] cursor-pointer shadow-sm transition">All</button>
-        <button onclick="filterGallery('proker')" class="filter-btn px-5 py-2 rounded-full border text-xs md:text-sm tracking-wide text-[#7A6B5D] bg-white/60 border-[#EBE4DC] hover:border-[#8D7B68] hover:text-[#4A403A] transition cursor-pointer shadow-sm">Proker</button>
-        <button onclick="filterGallery('warga')" class="filter-btn px-5 py-2 rounded-full border text-xs md:text-sm tracking-wide text-[#7A6B5D] bg-white/60 border-[#EBE4DC] hover:border-[#8D7B68] hover:text-[#4A403A] transition cursor-pointer shadow-sm">Warga</button>
-        <button onclick="filterGallery('desa')" class="filter-btn px-5 py-2 rounded-full border text-xs md:text-sm tracking-wide text-[#7A6B5D] bg-white/60 border-[#EBE4DC] hover:border-[#8D7B68] hover:text-[#4A403A] transition cursor-pointer shadow-sm">Desa</button>
-        <button onclick="filterGallery('photo')" class="filter-btn px-5 py-2 rounded-full border text-xs md:text-sm tracking-wide text-[#7A6B5D] bg-white/60 border-[#EBE4DC] hover:border-[#8D7B68] hover:text-[#4A403A] transition cursor-pointer shadow-sm">Photo</button>
+        <button onclick="filterGallery('proker')" class="filter-btn px-5 py-2 rounded-full border text-xs md:text-sm tracking-wide text-[#7A6B5D] bg-white/80 border-[#EBE4DC] hover:border-[#8D7B68] hover:text-[#4A403A] transition cursor-pointer shadow-sm">Proker</button>
+        <button onclick="filterGallery('warga')" class="filter-btn px-5 py-2 rounded-full border text-xs md:text-sm tracking-wide text-[#7A6B5D] bg-white/80 border-[#EBE4DC] hover:border-[#8D7B68] hover:text-[#4A403A] transition cursor-pointer shadow-sm">Warga</button>
+        <button onclick="filterGallery('desa')" class="filter-btn px-5 py-2 rounded-full border text-xs md:text-sm tracking-wide text-[#7A6B5D] bg-white/80 border-[#EBE4DC] hover:border-[#8D7B68] hover:text-[#4A403A] transition cursor-pointer shadow-sm">Desa</button>
+        <button onclick="filterGallery('photo')" class="filter-btn px-5 py-2 rounded-full border text-xs md:text-sm tracking-wide text-[#7A6B5D] bg-white/80 border-[#EBE4DC] hover:border-[#8D7B68] hover:text-[#4A403A] transition cursor-pointer shadow-sm">Photo</button>
     </section>
 
+    <!-- Gallery Album Grid Section -->
     <section class="max-w-6xl mx-auto px-6 py-8 w-full flex-grow">
-        <div id="full-gallery-container" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
-        
+        <div id="full-gallery-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-10">
+            <!-- Render otomatis gaya album foto via JavaScript -->
         </div>
     </section>
 
- 
-    <footer class="w-full py-10 px-6 border-t border-[#EBE4DC] bg-white/40 mt-auto flex flex-col sm:flex-row justify-between items-center text-xs text-[#7A6B5D]">
+    <!-- Footer -->
+    <footer class="w-full py-10 px-6 border-t border-[#EBE4DC] bg-white/50 mt-auto flex flex-col sm:flex-row justify-between items-center text-xs text-[#7A6B5D]">
         <p>Made with 🤎 by KKN Gunung Samarinda</p>
         <p class="mt-2 sm:mt-0">Inspirated by Journal Aesthetic</p>
     </footer>
 
-   
+    <!-- Script JavaScript -->
     <script>
-      
         const galleryData = [
-            { src: "moment-1.jpg", category: "proker" },
-            { src: "moment-2.jpg", category: "warga" },
-            { src: "moment-3.jpg", category: "desa" },
-            { src: "moment-4.jpg", category: "photo" },
-            { src: "moment-5.jpg", category: "proker" },
-            { src: "moment-6.jpg", category: "warga" },
-            { src: "moment-7.jpg", category: "desa" },
-            { src: "moment-8.jpg", category: "photo" },
-            { src: "moment-9.jpg", category: "proker" },
-            { src: "moment-10.jpg", category: "warga" },
-            { src: "moment-11.jpg", category: "desa" },
-            { src: "moment-12.jpg", category: "photo" }
+            { src: "moment-1.jpg", category: "proker", caption: "Sosialisasi & Program Kerja" },
+            { src: "moment-2.jpg", category: "warga", caption: "Kehangatan bersama warga" },
+            { src: "moment-3.jpg", category: "desa", caption: "Suasana posko & desa" },
+            { src: "moment-4.jpg", category: "photo", caption: " Candid moment ✨" },
+            { src: "moment-5.jpg", category: "proker", caption: "Pelaksanaan proker utama" },
+            { src: "moment-6.jpg", category: "warga", caption: "Aktivitas bareng anak-anak" },
+            { src: "moment-7.jpg", category: "desa", caption: "Eksplor sudut desa" },
+            { src: "moment-8.jpg", category: "photo", caption: "Sunset di lokasi KKN" },
+            { src: "moment-9.jpg", category: "proker", caption: "Dokumentasi UMKM" },
+            { src: "moment-10.jpg", category: "warga", caption: "Pamitan warga desa" },
+            { src: "moment-11.jpg", category: "desa", caption: "Gotong royong warga" },
+            { src: "moment-12.jpg", category: "photo", caption: "The squad 🤎" }
         ];
 
         const container = document.getElementById('full-gallery-container');
 
-       
         function renderGallery(filter = 'all') {
             container.innerHTML = ''; 
 
@@ -84,10 +85,17 @@
             filteredData.forEach((item, index) => {
                 const itemNumber = index + 1;
                 const div = document.createElement('div');
-                div.className = "aspect-[4/3] bg-white rounded-xl overflow-hidden border border-[#EBE4DC] shadow-sm hover:scale-[1.02] transition duration-300 flex items-center justify-center text-[#7A6B5D] text-xs";
+                
+                // Efek ala album foto / polaroid dengan padding putih di bawah dan rotasi tipis acak
+                div.className = "bg-white p-3 pb-5 rounded shadow-md border border-[#E7DFD5] transform hover:-translate-y-1 hover:rotate-0 transition duration-300 flex flex-col justify-between";
                 
                 div.innerHTML = `
-                    <img src="img/${item.src}" alt="Gallery Photo ${itemNumber}" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>Photo ${itemNumber}</span>';">
+                    <div class="aspect-[4/3] bg-[#EBE4DC] overflow-hidden rounded-sm flex items-center justify-center text-[#7A6B5D] text-xs">
+                        <img src="img/${item.src}" alt="Album Photo ${itemNumber}" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>Photo ${itemNumber}</span>';">
+                    </div>
+                    <div class="mt-3 text-center">
+                        <p class="text-[11px] tracking-wide text-[#7A6B5D] font-medium truncate">${item.caption || 'Memori KKN #' + itemNumber}</p>
+                    </div>
                 `;
                 
                 container.appendChild(div);
@@ -102,7 +110,7 @@
                 if(btn.textContent.toLowerCase() === category || (category === 'all' && btn.textContent === 'All')) {
                     btn.className = "filter-btn px-5 py-2 rounded-full border text-xs md:text-sm tracking-wide bg-[#8D7B68] text-white border-[#D3C5B4] cursor-pointer shadow-sm transition";
                 } else {
-                    btn.className = "filter-btn px-5 py-2 rounded-full border text-xs md:text-sm tracking-wide text-[#7A6B5D] bg-white/60 border-[#EBE4DC] hover:border-[#8D7B68] hover:text-[#4A403A] transition cursor-pointer shadow-sm";
+                    btn.className = "filter-btn px-5 py-2 rounded-full border text-xs md:text-sm tracking-wide text-[#7A6B5D] bg-white/80 border-[#EBE4DC] hover:border-[#8D7B68] hover:text-[#4A403A] transition cursor-pointer shadow-sm";
                 }
             });
         }
