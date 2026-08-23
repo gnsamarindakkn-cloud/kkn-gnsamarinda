@@ -62,48 +62,51 @@
         <span class="px-5 py-2 rounded-full border border-[#EBE4DC] text-xs md:text-sm tracking-wide text-[#7A6B5D] bg-white/60 hover:border-[#8D7B68] hover:text-[#4A403A] transition cursor-pointer shadow-sm">Proker</span>
     </section>
 
+    <!-- Featured Spotlight Section dengan Tombol Panah Kiri-Kanan -->
     <section id="explore" class="max-w-6xl mx-auto px-6 py-6 w-full relative">
-
+        <!-- Tombol Panah Kiri -->
         <button onclick="slideSlider('left')" class="absolute left-2 md:left-2 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white text-[#4A403A] p-3 rounded-full shadow-lg border border-[#EBE4DC] backdrop-blur-sm transition cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
             </svg>
         </button>
 
+        <!-- Tombol Panah Kanan -->
         <button onclick="slideSlider('right')" class="absolute right-2 md:right-2 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white text-[#4A403A] p-3 rounded-full shadow-lg border border-[#EBE4DC] backdrop-blur-sm transition cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
         </button>
 
+        <!-- Container Slider (7 Foto Lanskap) -->
         <div id="sliderContainer" class="flex items-center gap-4 md:gap-6 w-full overflow-x-auto py-4 px-10 no-scrollbar scroll-smooth">
-
+            
             <div class="w-64 md:w-80 h-40 md:h-48 rounded-2xl overflow-hidden bg-[#EBE4DC] flex-shrink-0 border border-[#D3C5B4] opacity-75 hover:opacity-100 transition duration-300 shadow-md">
-                <img src="img/spotlight-1.jpg" alt="Spotlight 1" class="w-full h-full object-cover" onerror="this.style.display='none';">
+                <img src="img/spotlight-1.jpg" alt="Spotlight 1" class="w-full h-full object-cover object-center transform scale-100 hover:scale-105 transition duration-500" onerror="this.style.display='none';">
             </div>
 
             <div class="w-64 md:w-80 h-40 md:h-48 rounded-2xl overflow-hidden bg-[#EBE4DC] flex-shrink-0 border border-[#D3C5B4] opacity-75 hover:opacity-100 transition duration-300 shadow-md">
-                <img src="img/spotlight-2.jpg" alt="Spotlight 2" class="w-full h-full object-cover" onerror="this.style.display='none';">
+                <img src="img/spotlight-2.jpg" alt="Spotlight 2" class="w-full h-full object-cover object-center transform scale-100 hover:scale-105 transition duration-500" onerror="this.style.display='none';">
             </div>
 
             <div class="w-64 md:w-80 h-40 md:h-48 rounded-2xl overflow-hidden bg-[#EBE4DC] flex-shrink-0 border border-[#D3C5B4] opacity-75 hover:opacity-100 transition duration-300 shadow-md">
-                <img src="img/spotlight-3.jpg" alt="Spotlight 3" class="w-full h-full object-cover" onerror="this.style.display='none';">
+                <img src="img/spotlight-3.jpg" alt="Spotlight 3" class="w-full h-full object-cover object-center transform scale-100 hover:scale-105 transition duration-500" onerror="this.style.display='none';">
             </div>
 
             <div class="w-64 md:w-80 h-40 md:h-48 rounded-2xl overflow-hidden bg-[#EBE4DC] flex-shrink-0 border border-[#D3C5B4] opacity-75 hover:opacity-100 transition duration-300 shadow-md">
-                <img src="img/spotlight-4.jpg" alt="Spotlight 4" class="w-full h-full object-cover" onerror="this.style.display='none';">
+                <img src="img/spotlight-4.jpg" alt="Spotlight 4" class="w-full h-full object-cover object-center transform scale-100 hover:scale-105 transition duration-500" onerror="this.style.display='none';">
             </div>
 
             <div class="w-64 md:w-80 h-40 md:h-48 rounded-2xl overflow-hidden bg-[#EBE4DC] flex-shrink-0 border border-[#D3C5B4] opacity-75 hover:opacity-100 transition duration-300 shadow-md">
-                <img src="img/spotlight-5.jpg" alt="Spotlight 5" class="w-full h-full object-cover" onerror="this.style.display='none';">
+                <img src="img/spotlight-5.jpg" alt="Spotlight 5" class="w-full h-full object-cover object-center transform scale-100 hover:scale-105 transition duration-500" onerror="this.style.display='none';">
             </div>
 
             <div class="w-64 md:w-80 h-40 md:h-48 rounded-2xl overflow-hidden bg-[#EBE4DC] flex-shrink-0 border border-[#D3C5B4] opacity-75 hover:opacity-100 transition duration-300 shadow-md">
-                <img src="img/spotlight-6.jpg" alt="Spotlight 6" class="w-full h-full object-cover" onerror="this.style.display='none';">
+                <img src="img/spotlight-6.jpg" alt="Spotlight 6" class="w-full h-full object-cover object-center transform scale-100 hover:scale-105 transition duration-500" onerror="this.style.display='none';">
             </div>
 
             <div class="w-64 md:w-80 h-40 md:h-48 rounded-2xl overflow-hidden bg-[#EBE4DC] flex-shrink-0 border border-[#D3C5B4] opacity-75 hover:opacity-100 transition duration-300 shadow-md">
-                <img src="img/spotlight-7.jpg" alt="Spotlight 7" class="w-full h-full object-cover" onerror="this.style.display='none';">
+                <img src="img/spotlight-7.jpg" alt="Spotlight 7" class="w-full h-full object-cover object-center transform scale-100 hover:scale-105 transition duration-500" onerror="this.style.display='none';">
             </div>
 
         </div>
